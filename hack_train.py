@@ -141,6 +141,11 @@ def main(args):
 
 
     model = models.resnext101_32x8d(pretrained=True)
+
+#   Uncomment for learning with freezed feature extractor
+#     for param in model.parameters():
+#         param.requires_grad = False
+    
     model.fc = nn.Linear(model.fc.in_features, 2 * NUM_PTS, bias=True)
 
     if args.checkpoint is not None:
