@@ -9,7 +9,7 @@
 ## How was the model trained
 
 1. Launched `train_in_colab_and_generate_submission.ipynb` to calculate mean and std for all pixels for 3 channels in image dataset, got `mean=[0.39963884, 0.31994772, 0.28253724], std=[0.33419772, 0.2864468, 0.26987])`
-2. 3 epoch with `lr=0.001`, `gamma=1` to get `v1_resnext_best.pth`
+2. 6 epoch with `lr=0.001`, `gamma=1` to get `v1_resnext_best.pth`
 3. 3 epoch with `lr=0.001`, `gamma=0.2` to get `v1_resnext_6_best.pth` and `v1_resnext_6_submit.csv`
 4. 1 epoch with `lr=0.0001`, freezed feature extractor to get `v1_resnext_freezed_best.pth` and `v1_resnext_freezed_submit.csv`  
 
